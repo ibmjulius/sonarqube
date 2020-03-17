@@ -31,7 +31,7 @@ SONAR_ARGUMENTS="-Dsonar.web.context=${SONARQUBE_WEB_CONTEXT} \
   -Dsonar.core.serverBaseURL=${SONARQUBE_SERVER_BASE} \
   -Dsonar.forceAuthentication=${SONARQUBE_FORCE_AUTHENTICATION}"
 
-if [ "$ADOP_LDAP_ENABLED" = true ]
+if [ "$LDAP_ENABLED" = true ]
   then
   SONAR_ARGUMENTS+=" -Dsonar.security.realm=LDAP \
     -Dsonar.security.savePassword=false \

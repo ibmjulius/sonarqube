@@ -1,6 +1,6 @@
 #Supported tags and respective Dockerfile links
 
-- [`0.1.0`, `0.1.0` (*0.1.0/Dockerfile*)](https://github.com/Accenture/adop-sonar/blob/master/Dockerfile.md)
+- [`0.1.0`, `0.1.0` (*0.1.0/Dockerfile*)](https://github.com/ibmjulius/sonar/blob/master/Dockerfile.md)
 
 # What is adop-sonar?
 
@@ -13,7 +13,7 @@ SonarQube® software (previously called Sonar) is an open source quality managem
 
 To start the server with the default H2 database run the following, where VERSION is the release version of the Docker container.
 
-      docker run -d --name sonarqube -p 9000:9000 -e ADOP_LDAP_ENABLED=false adop/sonar:VERSION
+      docker run -d --name sonarqube -p 9000:9000 -e LDAP_ENABLED=false sonar:VERSION
 
 ## Database configuration
 
@@ -40,7 +40,7 @@ A standard MySQL database can be started with the following.
 
 ## LDAP Authentication
 
-By default, the image will enable LDAP authentication, setting the `ADOP_LDAP_ENABLED` environment variable to false will disable LDAP authentication.
+By default, the image will enable LDAP authentication, setting the `LDAP_ENABLED` environment variable to false will disable LDAP authentication.
 
 The image reads the following LDAP environment variables:
 
@@ -95,9 +95,7 @@ Documentation for this image is available in the [Sonar documentation page](http
 Additional documentaion can be found under the [`docker-library/docs` GitHub repo](https://github.com/docker-library/docs). Be sure to familiarize yourself with the [repository's `README.md` file](https://github.com/docker-library/docs/blob/master/README.md) before attempting a pull request.
 
 ## Issues
-If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/Accenture/adop-sonar/issues).
+If you have any problems with or questions about this image, please contact us.
 
 ## Contribute
 You are invited to contribute new features, fixes, or updates, large or small; we are always thrilled to receive pull requests, and do our best to process them as fast as we can.
-
-Before you start to code, we recommend discussing your plans through a [GitHub issue](https://github.com/Accenture/adop-sonar/issues), especially for more ambitious contributions. This gives other contributors a chance to point you in the right direction, give you feedback on your design, and help you find out if someone else is working on the same thing.

@@ -1,12 +1,12 @@
 FROM sonarqube:6.7.5
 
-MAINTAINER Robert Northard, <robert.a.northard>
+MAINTAINER Julius Ca-aya
 
 ENV SONARQUBE_PLUGINS_DIR=/opt/sonarqube/default/extensions/plugins \
     SONARQUBE_SERVER_BASE="http://localhost:9000" \
     SONARQUBE_WEB_CONTEXT="/sonar" \
     SONARQUBE_FORCE_AUTHENTICATION=true \
-    ADOP_LDAP_ENABLED=true \
+    LDAP_ENABLED=true \
     SONARQUBE_JMX_ENABLED=false \
     DOCKERIZE_VERSION=v0.5.0
 
