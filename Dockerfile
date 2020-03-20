@@ -1,4 +1,4 @@
-FROM sonarqube:6.7.5
+FROM sonarqube:6.7.2
 
 MAINTAINER Julius Ca-aya
 
